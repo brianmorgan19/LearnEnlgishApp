@@ -3,19 +3,30 @@ package com.example.mysecretapp.signupin
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TableLayout
-import android.widget.ToggleButton
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import androidx.room.Room
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.example.mysecretapp.R
+import com.example.mysecretapp.database.*
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.fragment_sign_in_tab.*
+import kotlinx.android.synthetic.main.fragment_sing_up_tab.*
+import kotlinx.android.synthetic.main.fragment_sing_up_tab.password2
+import kotlinx.android.synthetic.main.fragment_sing_up_tab.view.*
 import kotlinx.android.synthetic.main.main_login_activity.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
@@ -43,5 +54,7 @@ class LoginActivity : AppCompatActivity() {
                 else -> throw Resources.NotFoundException("pos isn't found")
             }
         }.attach()
+
+        }
     }
-}
+

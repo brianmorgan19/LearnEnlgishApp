@@ -5,12 +5,10 @@ import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.mysecretapp.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
+import android.view.*
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -58,11 +56,13 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
                     .setTitle("sdsdsd")
                     .setView(v)
                     .setPositiveButton("OK") { dialogInterface, i ->
-                        val title = v.findViewById<EditText>(R.id.edTextDialog).text.toString()
-                        val word = Word(title, false)
+                        val parent:ViewGroup? = v.parent as? ViewGroup
+                        parent?.removeView(v)
+                        val title = v.findViewById<EditText>(R.id.edTextDialog).text
+                        val word = Word(title.toString(), false)
                         if (title.isNotEmpty()) {
+                            title.clear()
                             list.add(word)
-                            view.rcView.removeAllViews()
                             adapter.notifyDataSetChanged()
                             Toast.makeText(activity,
                                 "Вы добавили Item",

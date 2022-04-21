@@ -4,6 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintVertical_bias=".45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Войти"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:paddingBottom="10dp"
         android:background="@drawable/et_background"
@@ -41,7 +53,7 @@
     <TextView
         app:layout_constraintWidth_percent=".8"
         app:layout_constraintHorizontal_bias="0.85"
-        android:id="@+id/password2"
+        android:id="@+id/tvView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -53,18 +65,19 @@
         app:layout_constraintVertical_bias="0" />
 
     <Button
+        app:backgroundTint="@null"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
         android:text="ВОЙТИ"
         android:background="@drawable/btn_background"
         app:layout_constraintWidth_percent=".8"
         app:layout_constraintVertical_bias=".4"
-        android:id="@+id/btn_signup"
+        android:id="@+id/btn_signign"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

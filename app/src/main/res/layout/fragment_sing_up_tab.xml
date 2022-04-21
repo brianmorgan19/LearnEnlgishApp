@@ -3,26 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
 
+
+
     <TextView
-        android:fontFamily="sans-serif-light"
-        app:layout_constraintVertical_bias=".45"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
         android:text="Регистрация"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/email_reg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".45" />
+
 
     <EditText
 
         android:background="@drawable/et_background"
-        android:id="@+id/email"
-        android:layout_width="0dp"
+        android:id="@+id/email_reg"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +46,8 @@
         android:background="@drawable/et_background"
         android:layout_marginTop="10dp"
         app:layout_constraintVertical_bias="0"
-        android:id="@+id/password"
-        android:layout_width="0dp"
+        android:id="@+id/password_reg"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Пароль"
         android:paddingLeft="20dp"
@@ -50,7 +55,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email_reg"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
@@ -60,7 +65,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintVertical_bias="0"
         android:id="@+id/password2"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Повторите пароль"
         android:paddingLeft="20dp"
@@ -68,10 +73,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password_reg"
         app:layout_constraintWidth_percent=".8" />
 
     <Button
+        app:backgroundTint="@null"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
         android:text="СОЗДАТЬ АККАУНТ"
@@ -79,7 +85,7 @@
         app:layout_constraintWidth_percent=".8"
         app:layout_constraintVertical_bias=".4"
         android:id="@+id/btn_signup"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

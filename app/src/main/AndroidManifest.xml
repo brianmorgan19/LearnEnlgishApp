@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySecretApp">
         <activity
+            android:name=".signupin.Forget_password"
+            android:exported="false" />
+        <activity
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
             android:name=".MainActivity"
             android:exported="false" />
         <activity

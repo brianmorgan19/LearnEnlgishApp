@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:backgroundTint="@null"
         android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="75dp"
